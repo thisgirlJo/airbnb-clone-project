@@ -24,7 +24,8 @@ Entities and Relationships
 1. **Users**
 
 **Description**: Represents users who can own properties or make bookings.
-*Key Fields:*
+Key Fields:
+
     id – unique identifier for each user
     name – user’s full name
     email – unique email address
@@ -32,8 +33,11 @@ Entities and Relationships
     role – defines whether the user is a host or a guest
 
 Relationships:
+
     A user can own multiple properties.
+
     A user can make multiple bookings.
+
     A user can write multiple reviews.
 
 2. **Properties**
@@ -48,13 +52,17 @@ Key Fields:
     price_per_night – cost to book per night
 
 Relationships:
+
     A property belongs to a user (host).
+
     A property can have multiple bookings and reviews.
 
 3. **Bookings**
 
 **Description:** Represents reservations made by users for specific properties.
+
 Key Fields:
+
 id – unique booking identifier
 user_id – references the guest
 property_id – references the property booked
@@ -62,13 +70,17 @@ check_in_date
 check_out_date
 
 Relationships:
+
 A booking belongs to a user (guest).
+
 A booking belongs to a property.
+
 A booking can have one payment.
 
 4. **Reviews**
 
 **Description**: Feedback or ratings left by users for a property.
+
 Key Fields:
     id – unique review identifier
     user_id – reviewer’s ID
@@ -83,7 +95,9 @@ Relationships:
 5. **Payments**
 
 Description: Tracks payment information for bookings.
+
 Key Fields:
+
     id – unique payment identifier
     booking_id – references related booking
     amount – total payment amount
@@ -91,14 +105,21 @@ Key Fields:
     payment_date – timestamp of payment
 
 Relationships:
+
     A payment belongs to a booking.
+
     A booking has one payment.
 
 ### Entity Relationship Summary
+
 User ⇢ Property: One-to-Many
+
 User ⇢ Booking: One-to-Many
+
 Property ⇢ Booking: One-to-Many
+
 Property ⇢ Review: One-to-Many
+
 Booking ⇢ Payment: One-to-One
 
 ## 🛠️ Features Overview
