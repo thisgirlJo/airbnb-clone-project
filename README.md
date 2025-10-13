@@ -24,7 +24,7 @@ Entities and Relationships
 1. **Users**
 
 **Description**: Represents users who can own properties or make bookings.
-Key Fields:
+*Key Fields:*
     id – unique identifier for each user
     name – user’s full name
     email – unique email address
