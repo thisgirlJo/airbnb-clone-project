@@ -35,9 +35,7 @@ Key Fields:
 Relationships:
 
     A user can own multiple properties.
-
     A user can make multiple bookings.
-
     A user can write multiple reviews.
 
 2. **Properties**
@@ -63,25 +61,24 @@ Relationships:
 
 Key Fields:
 
-id – unique booking identifier
-user_id – references the guest
-property_id – references the property booked
-check_in_date
-check_out_date
+    id – unique booking identifier
+    user_id – references the guest
+    property_id – references the property booked
+    check_in_date
+    check_out_date
 
 Relationships:
 
-A booking belongs to a user (guest).
-
-A booking belongs to a property.
-
-A booking can have one payment.
+    A booking belongs to a user (guest).
+    A booking belongs to a property.
+    A booking can have one payment.
 
 4. **Reviews**
 
 **Description**: Feedback or ratings left by users for a property.
 
 Key Fields:
+
     id – unique review identifier
     user_id – reviewer’s ID
     property_id – reviewed property ID
@@ -89,6 +86,7 @@ Key Fields:
     comment – review text
 
 Relationships:
+
     A review belongs to a user.
     A review belongs to a property.
 
@@ -107,7 +105,6 @@ Key Fields:
 Relationships:
 
     A payment belongs to a booking.
-
     A booking has one payment.
 
 ### Entity Relationship Summary
