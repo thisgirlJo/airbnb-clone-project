@@ -6,7 +6,7 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 2. **Property Management**: Develop features for property listing creation, updates, and retrieval.
 3. **Booking System**: Create a booking mechanism for users to reserve properties and manage booking details.
 4. **Payment Processing**: Integrate a payment system to handle transactions and record payment details.
-5. Review System: Allow users to leave reviews and ratings for properties.
+5. **Review System**: Allow users to leave reviews and ratings for properties.
 Data Optimization: Ensure efficient data retrieval and storage through database optimizations.
 
 ## ⚙️ Technology Stack
@@ -119,31 +119,54 @@ Property ⇢ Review: One-to-Many
 
 Booking ⇢ Payment: One-to-One
 
-## 🛠️ Features Overview
+## 🛠️ Features Breakdown
  API Documentation
-1. OpenAPI Standard: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
-2. Django REST Framework: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
+1. **OpenAPI Standard**: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
+2. **Django REST Framework**: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
 GraphQL: Offers a flexible and efficient query mechanism for interacting with the backend.
-3. User Authentication
+3. **User Authentication**
 Endpoints: /users/, /users/{user_id}/
 Features: Register new users, authenticate, and manage user profiles.
-4. Property Management
+4. **Property Management**
 Endpoints: /properties/, /properties/{property_id}/
 Features: Create, update, retrieve, and delete property listings.
-5. Booking System
+5. **Booking System**
 Endpoints: /bookings/, /bookings/{booking_id}/
 Features: Make, update, and manage bookings, including check-in and check-out details.
-6. Payment Processing
+6. **Payment Processing**
 Endpoints: /payments/
 Features: Handle payment transactions related to bookings.
-7. Review System
+7. **Review System**
 Endpoints: /reviews/, /reviews/{review_id}/
 Features: Post and manage reviews for properties.
-8. Database Optimizations
+8. **Database Optimizations**
 Indexing: Implement indexes for fast retrieval of frequently accessed data.
 Caching: Use caching strategies to reduce database load and improve performance.
 
+## 🔒 API Security
+### Key Security Measures
 
+**Authentication:**
+Uses JWT or OAuth2 to verify user identity and prevent unauthorized access.
+
+**Authorization:**
+Role-based access control ensures users only perform allowed actions (e.g., hosts manage properties, guests make bookings).
+
+**Data Encryption:**
+All sensitive data (passwords, payments) is encrypted in transit (HTTPS/TLS) and at rest (bcrypt).
+
+**Rate Limiting:**
+Controls request frequency to prevent abuse and brute-force attacks.
+
+**Input Validation:**
+Sanitizes all user input to block SQL injection and XSS attacks.
+
+**Secure Payments:**
+Uses trusted gateways (e.g., Stripe, Paystack) for tokenized transactions—no card data stored on our servers.
+
+**Why Security Matters**
+
+Protects user data, ensures safe transactions, prevents system abuse, and builds trust within the platform.
 
 ## 👥 Team Roles
 1. Backend Developer: Responsible for implementing API endpoints, database schemas, and business logic.
