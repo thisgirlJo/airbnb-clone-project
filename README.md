@@ -125,7 +125,7 @@ Property ⇢ Review: One-to-Many
 
 Booking ⇢ Payment: One-to-One
 
-## 🛠️ Features Breakdown
+## 🛠️ Feature Breakdown
 1. **User Management**
 
 Handles user registration, authentication, and profile management.
