@@ -19,6 +19,12 @@ Data Optimization: Ensure efficient data retrieval and storage through database 
 7. **Docker**: Containerization tool for consistent development and deployment environments.
 8. **CI/CD Pipelines**: Automated pipelines for testing and deploying code changes.
 
+## 👥 Team Roles
+1. Backend Developer: Responsible for implementing API endpoints, database schemas, and business logic.
+2. Database Administrator: Manages database design, indexing, and optimizations.
+3. DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
+4. QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
+
 ## ⚙️ Database Design
 Entities and Relationships
 1. **Users**
@@ -120,30 +126,38 @@ Property ⇢ Review: One-to-Many
 Booking ⇢ Payment: One-to-One
 
 ## 🛠️ Features Breakdown
- API Documentation
-1. **OpenAPI Standard**: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
-2. **Django REST Framework**: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
-GraphQL: Offers a flexible and efficient query mechanism for interacting with the backend.
-3. **User Authentication**
-Endpoints: /users/, /users/{user_id}/
-Features: Register new users, authenticate, and manage user profiles.
-4. **Property Management**
-Endpoints: /properties/, /properties/{property_id}/
-Features: Create, update, retrieve, and delete property listings.
-5. **Booking System**
-Endpoints: /bookings/, /bookings/{booking_id}/
-Features: Make, update, and manage bookings, including check-in and check-out details.
-6. **Payment Processing**
-Endpoints: /payments/
-Features: Handle payment transactions related to bookings.
-7. **Review System**
-Endpoints: /reviews/, /reviews/{review_id}/
-Features: Post and manage reviews for properties.
-8. **Database Optimizations**
-Indexing: Implement indexes for fast retrieval of frequently accessed data.
-Caching: Use caching strategies to reduce database load and improve performance.
+1. **User Management**
+
+Handles user registration, authentication, and profile management.
+Users can sign up, log in securely, update their details, and manage their roles (host or guest), forming the foundation of all platform interactions.
+
+2. **Property Management**
+
+Allows hosts to create, update, and delete property listings.
+Each listing includes details such as title, description, location, price, and images—helping guests browse and find suitable accommodations.
+
+3. **Booking System**
+
+Enables guests to book available properties for specific dates.
+The system prevents overlapping bookings and ensures a smooth reservation process between guests and hosts.
+
+4. **Review System**
+
+Allows guests to leave reviews and ratings after completing a stay.
+This feature promotes transparency, helps improve service quality, and builds trust within the platform community.
+
+5. **Payment Integration**
+
+Facilitates secure and reliable payment processing using trusted gateways like Stripe or Paystack.
+Ensures guests can pay safely, and hosts receive timely payments for confirmed bookings.
+
+6. **Search and Filtering**
+
+Provides powerful search and filtering options by location, date, and price.
+Enhances user experience by making it easy to find properties that match guests’ preferences.
 
 ## 🔒 API Security
+
 ### Key Security Measures
 
 **Authentication:**
@@ -168,12 +182,23 @@ Uses trusted gateways (e.g., Stripe, Paystack) for tokenized transactions—no c
 
 Protects user data, ensures safe transactions, prevents system abuse, and builds trust within the platform.
 
-## 👥 Team Roles
-1. Backend Developer: Responsible for implementing API endpoints, database schemas, and business logic.
-2. Database Administrator: Manages database design, indexing, and optimizations.
-3. DevOps Engineer: Handles deployment, monitoring, and scaling of the backend services.
-4. QA Engineer: Ensures the backend functionalities are thoroughly tested and meet quality standards.
+## ⚙️ CI/CD Pipeline
 
-## 📈 API Documentation Overview
-1. REST API: Detailed documentation available through the OpenAPI standard, including endpoints for users, properties, bookings, and payments.
-2. GraphQL API: Provides a flexible query language for retrieving and manipulating data.
+**Continuous Integration (CI)** and **Continuous Deployment (CD)** ensure that code changes are automatically tested, built, and deployed with minimal manual effort.
+This process helps maintain code quality, catch bugs early, and speed up delivery to production.
+
+**Why It’s Important**
+
+- Ensures consistent and reliable updates to the application.
+
+- Automates testing and deployment, reducing human error.
+
+- Speeds up the development cycle and encourages collaboration among developers.
+
+**Tools Used**
+
+- GitHub Actions: Automates testing, building, and deployment workflows directly from the repository.
+
+- Docker: Ensures consistent environments across development, testing, and production.
+
+- (Optional) Jenkins, Travis CI, or CircleCI can also be used for advanced automation.
